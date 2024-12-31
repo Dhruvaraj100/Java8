@@ -1,10 +1,9 @@
+package groupingBy;
 
 import java.util.Arrays;
-import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class GroupByExample {
@@ -14,7 +13,7 @@ public class GroupByExample {
         Map<String, Long> fruitsMap = fruits.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(fruitsMap);
 
-        System.out.println("***************** Fruit *****************");
+        System.out.println("***************** groupingBy.Fruit *****************");
 
         List<Fruit> fruitList = Arrays.asList(new Fruit("apple", 100, 2), new Fruit("banana", 30, 4), new Fruit("pineapple", 50, 8), new Fruit("apple", 100, 22), new Fruit("banana", 30, 4));
         Map<String, Long> fruitMap = fruitList.stream().collect(Collectors.groupingBy(Fruit::getName, Collectors.counting()));

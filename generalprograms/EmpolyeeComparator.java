@@ -9,7 +9,7 @@ public class EmpolyeeComparator {
     public static void main(String[] args) {
 
         List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee("Raj", 24));
+        employees.add(new Employee ("Raj", 24));
         employees.add(new Employee("Rahul", 38));
         employees.add(new Employee("Deepak", 26));
         employees.add(new Employee("Kavya", 28));
